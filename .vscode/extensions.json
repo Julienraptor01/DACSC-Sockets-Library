@@ -1,0 +1,23 @@
+{
+	"recommendations": [
+		"bpruitt-goddard.mermaid-markdown-syntax-highlighting",
+		"davidkol.fastcompare",
+		"editorconfig.editorconfig",
+		"github.vscode-github-actions",
+		"jock.svg",
+		"lacroixdavid1.vscode-format-context-menu",
+		"medo64.render-crlf",
+		"mhutchie.git-graph",
+		"ms-vscode.cpptools",
+		"ms-vscode.hexeditor",
+		"ms-vscode.makefile-tools",
+		"mtxr.sqltools",
+		"mtxr.sqltools-driver-mysql",
+		"sandcastle.vscode-open",
+		"shahilkumar.docxreader",
+		"tomoki1207.pdf",
+		"twxs.cmake",
+		"tyriar.sort-lines",
+		"vstirbu.vscode-mermaid-preview"
+	]
+}
