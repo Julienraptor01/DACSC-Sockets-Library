@@ -5,7 +5,7 @@
 #include <sys/socket.h>
 #include <unistd.h>
 
-int createServerSocket(unsigned short listeningPort, ipv4Address *interfaceIP) {
+int createServerSocket(ipv4Address interfaceIP, unsigned short listeningPort) {
 	int serverSocket = socket(AF_INET, SOCK_STREAM, 0);
 	if (serverSocket < 0) {
 		return -1;
@@ -13,7 +13,7 @@ int createServerSocket(unsigned short listeningPort, ipv4Address *interfaceIP) {
 	struct sockaddr_in serverAddress;
 	serverAddress.sin_family = AF_INET;
 	serverAddress.sin_port = htons(listeningPort);
-	serverAddress.sin_addr.s_addr = interfaceIP->address;
+	serverAddress.sin_addr.s_addr = interfaceIP.address;
 	if (bind(serverSocket, (struct sockaddr *)&serverAddress, sizeof(sockaddr_in)) < 0) {
 		close(serverSocket);
 		return -1;

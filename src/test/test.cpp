@@ -41,7 +41,7 @@ bool server(char *interface) {
 	char interfaceIPString[16];
 	ipv4AddressToString(interfaceIP, interfaceIPString);
 	printf("Using interface %s\n", interfaceIPString);
-	int serverSocket = createServerSocket(6942, &interfaceIP);
+	int serverSocket = createServerSocket(interfaceIP, 6942);
 	if (serverSocket < 0) {
 		printf("Failed to create server socket\n");
 		return false;

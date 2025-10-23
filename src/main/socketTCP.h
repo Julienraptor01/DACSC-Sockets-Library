@@ -7,11 +7,11 @@
 
 /**
  * @brief Create a server socket
- * @param serverPort The port to listen on
  * @param interfaceIP The IP address of the interface to bind to
+ * @param serverPort The port to listen on
  * @return The server socket
  */
-int createServerSocket(unsigned short serverPort, ipv4Address *interfaceIP);
+int createServerSocket(ipv4Address interfaceIP, unsigned short serverPort);
 /**
  * @brief Accept a client connection
  * @param serverSocket The server socket
