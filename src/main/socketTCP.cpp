@@ -10,6 +10,11 @@ int createServerSocket(ipv4Address interfaceIP, unsigned short listeningPort) {
 	if (serverSocket < 0) {
 		return -1;
 	}
+	int optval = 1;
+	if (setsockopt(serverSocket, SOL_SOCKET, SO_REUSEADDR, &optval, sizeof(optval)) < 0) {
+		close(serverSocket);
+		return -1;
+	}
 	struct sockaddr_in serverAddress;
 	serverAddress.sin_family = AF_INET;
 	serverAddress.sin_port = htons(listeningPort);
